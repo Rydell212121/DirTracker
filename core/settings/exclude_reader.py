@@ -14,7 +14,7 @@ def exclude_dirs(
     """Read exclude file and return list of excluded directories."""
     excluded_dirs: list[str] = []
     try:
-        with open(path, "r") as file:
+        with open(path, encoding="utf-8") as file:
             for line in file:
                 line = line.strip()
                 if line and not line.startswith("#"):

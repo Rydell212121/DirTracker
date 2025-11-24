@@ -19,7 +19,7 @@ def __conf_read() -> dict[str, str | os.PathLike[str]]:
     PATH_TO_FILE_EXCLUDE_DIRS=./settings/excluded_dirs.conf
     PATH_TO_FILE_EXCLUDE_FILES=./settings/excluded_files.conf
     """
-    with open("./settings/config.conf") as file:
+    with open("./settings/config.conf", encoding="utf-8") as file:
         settings: dict[str, str | os.PathLike[str]] = {}
         for pair in file.readlines():
             pair = pair.strip()
